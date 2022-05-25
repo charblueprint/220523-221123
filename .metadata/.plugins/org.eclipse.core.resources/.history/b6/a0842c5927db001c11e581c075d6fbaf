@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Scan4 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("입력할 내용을 적어주세요 >> ");
+		String text = sc.next();
+		
+		System.out.println(text);
+	}
+
+}

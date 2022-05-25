@@ -1,0 +1,18 @@
+/*응용문제*/
+/*<문제>
+ * 합ㄱ
+ */
+public class App {
+
+	public static void main(String[] args) {
+		short a = 25+31*4+12;
+		short b = 15*3+9+14;
+		if(a>b) {
+			System.out.println(b);
+		}
+		else if (a<b) {
+			System.out.println(a);
+		}
+	}
+
+}

@@ -1,0 +1,28 @@
+package Classtime;
+
+public class For2 {
+
+	public static void main(String[] args) {
+		int a; // for문 초기값
+		int b=2; // 연산에 사용할 변수
+		int c; //연산할 결과값 사용
+		for(a=1; a<=9; a++) {
+			c=b*a;
+			//System.out.print(c+" ");
+		}
+		/*응용문제 #5
+		 * 다음 결과값을 보고 코드를 작성하시오
+		 * 45,40,35,30,25,20,
+		 */
+		int A;
+		int B=5;
+		int C;
+		System.out.print("값 : ");
+		for(A=9; A>=4; A--) {
+			C=A*B;
+			System.out.print(C+",");
+		}
+		
+	}
+
+}

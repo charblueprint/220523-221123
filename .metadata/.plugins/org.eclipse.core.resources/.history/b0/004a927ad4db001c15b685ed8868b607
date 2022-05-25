@@ -1,0 +1,31 @@
+/*응용문제 #1 (0525)
+	고객이 자신의 통장에서 입,출금을 하는 프로세서를 제작해야 합니다.
+	고객의 기본 자산 금액 = 100,000won 
+	"1번 입력시 입금, 2번 입력시 출금입니다." 하는 메세지가 제일 먼저 실행되어야 합니다.
+		1번 입력시 "해당 금액을 입력하세요"
+		사용자가 입력한 금액 + 기본 자산금액을 합한 총 자산금액을 출력하시면 됩니다.	
+		2번을 입력시 "출금할 금액을 입력하세요"
+		사용자가 입력한 금액 - 기본자산금액을 계산하여 총 자산금액을 출력하시면 됩니다.
+*/
+package Questions0525;
+
+import java.util.Scanner;
+
+public class bounsQuestion {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int basicA = 100000;
+		int Money = sc.nextInt();
+		System.out.print("1번 입력시 입금, 2번 입력시 출금입니다.")
+		
+		int pressOne = basicA+Money;
+		if()
+		System.out.print("총 금액은 %s원입니다.",pressOne);
+		
+		int pressTwo = basicA-Money;
+		System.out.print("총 금액은 %s원입니다.",pressTwo);
+		
+	}
+
+}

@@ -1,0 +1,19 @@
+
+public class If2 {
+
+	public static void main(String[] args) {
+		String mid1 = "hong"; // 이거 입력할 때 공백도 인식한다!
+		String mid2 = "kim";
+		
+		if(mid1.equals("hong")) {
+			System.out.println(mid1+"님 환영합니다.");
+		}
+		else if(mid2.equals("kim")) {
+			System.out.println(mid2+"님 환영합니다.");
+		}
+		else {
+			System.out.println("가입되지 않은 사용자 입니다.");
+		}
+	}
+
+}

@@ -1,0 +1,13 @@
+package Classtime;
+
+public class For1 {
+
+	public static void main(String[] args) {
+		//반복문 : 데이터를 일괄적으로 입력, 출력을 할 수 있도록 하는 문법 - 게시판, 메일등지에 쓰임
+		for(int a=0; a<10; a++) {
+			System.out.print(a/n);
+			
+		}
+	}
+
+}

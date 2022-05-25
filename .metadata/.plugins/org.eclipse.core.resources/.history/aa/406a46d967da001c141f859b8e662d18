@@ -1,0 +1,16 @@
+
+public class Datatype {
+
+	public static void main(String[] args) {
+		//String : 문자 "" 무조건 사용
+		String a = "1234";
+		System.out.println(a);
+		
+		byte b = 126;   //byte : -128~127
+		System.out.println(b);
+		
+		short c = 32767;   //short : -32,768 ~ 32,767
+		System.out.println(c);
+	}
+
+}

@@ -1,0 +1,17 @@
+
+public class Datatype {
+
+	public static void main(String[] args) {
+		//String : 문자 "" 무조건 사용
+		String a = "1234";
+		System.out.println(a);
+		
+		byte b = 100;
+		System.out.println(b);
+		
+		
+		
+
+	}
+
+}
