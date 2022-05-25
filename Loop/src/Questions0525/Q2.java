@@ -20,9 +20,22 @@ public class Q2 {
 		int x = 99;
 		int y = 47;
 		while (x >= y) {
-			System.out.printf("%d ",x);
+			//System.out.printf("%d ",x);
 			x--;
 		}
+/* 응용문제 #9 해당 결과값을 확인하여 반복문으로 코드를 작성하시오.
+56,49,42,35,28,21,
+ */
+		int B = 8;
+		int C = 7;
+		int D;
+		while (B>=3) {
+			D=B*C;
+			System.out.printf("%d ", D);
+			B--;
+		}
+
+		
 	}		
 }
 

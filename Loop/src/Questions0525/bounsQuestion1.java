@@ -6,35 +6,38 @@
 		사용자가 입력한 금액 + 기본 자산금액을 합한 총 자산금액을 출력하시면 됩니다.	
 		2번을 입력시 "출금할 금액을 입력하세요"
 		사용자가 입력한 금액 - 기본자산금액을 계산하여 총 자산금액을 출력하시면 됩니다.
+		미지수로 둬야 할 것 : 1. 선택한 번호 2.입금 금액 3. 출금 금액
 */
 package Questions0525;
 
 import java.util.Scanner;
 
-public class bounsQuestion {
+public class bounsQuestion1 {
 
 	public static void main(String[] args) {
 		Scanner num = new Scanner(System.in);
-		System.out.print("1번 입력시 입금, 2번 입력시 출금입니다.");
+		System.out.print("1번 입력시 입금, 2번 입력시 출금입니다."); // 필수 메세지
 		String press = num.next();
-		int UserAccount = 100000;
-		
-		Scanner bill = new Scanner(System.in);
-		int PutMoney = bill.nextInt(); // 넣고자,빼고자하는 금액 입력
-		
-		if(press.equals("1번")) {
-			System.out.println("해당 금액을 입력하세요. >> ");
-			System.out.printf("총 금액은 %s원입니다.",(UserAccount+PutMoney));
+
+		int UserAccount = 100000; // 기본 자산 정보
+
+		if (press.equals("1번")) {// 메뉴선택
+			System.out.println("해당 금액을 입력하세요. >> "); // 넣고자,빼고자하는 금액 입력
+			Scanner bill = new Scanner(System.in);
+			int PutMoney = bill.nextInt();
+			System.out.printf("총 금액은 %s원입니다.", (UserAccount + PutMoney)); //입금시 총 자산금액
+			bill.close();
 		} else if (press.equals("2번")) {
 			System.out.println("출금할 금액을 입력하세요");
-			System.out.printf("총 금액은 %s원입니다.",(UserAccount-PutMoney));
-		} else {
+			Scanner want = new Scanner(System.in);
+			int OutMoney = want.nextInt();
+			System.out.printf("총 금액은 %s원입니다.", (UserAccount - OutMoney));//출금시 총 자산금액
+			want.close();
+		} else { // 잘못 입력시
 			System.out.println("잘못 입력하셨습니다. 어플리케이션을 종료합니다.");
 			System.exit(0);
 		}
 		num.close();
-		bill.close();
-		
 	}
 
 }
