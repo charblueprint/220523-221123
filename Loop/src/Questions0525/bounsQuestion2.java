@@ -1,5 +1,5 @@
-/*ÀÀ¿ë¹®Á¦ #2 (0525)
- * ´ÙÀ½ °á°ú °ªÀ» È®ÀÎÇÏ½Å ÈÄ ÇØ´ç °á°ú°ª¿¡ ¸Â´Â ÄÚµå¸¦ ÀÛ¼ºÇÏ½Ã¿À. 
+/*ì‘ìš©ë¬¸ì œ #2 (0525)
+ * ë‹¤ìŒ ê²°ê³¼ ê°’ì„ í™•ì¸í•˜ì‹  í›„ í•´ë‹¹ ê²°ê³¼ê°’ì— ë§ëŠ” ì½”ë“œë¥¼ ì‘ì„±í•˜ì‹œì˜¤. 
  * 4,7,10,13,16,19,22,
  */
 package Questions0525;
@@ -7,12 +7,13 @@ package Questions0525;
 public class bounsQuestion2 {
 	
 	public static void main(String... args) {
-		int A=3;
+		int A=0;
 		int B;
-		int C;
 		do {
-			C=;
-		}while(B<=22);
+			B=4+(3*A);
+			System.out.print(B+",");
+			A++;
+		}while(A<=6);
 	}
 
 }
