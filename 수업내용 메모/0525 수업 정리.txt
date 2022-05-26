@@ -1,0 +1,34 @@
+<If문 복습>
+int a  = 10;
+
+if ( 조건문 ) {
+   해당 조건이 맞을 경우 실행되는 코드
+} else if ( if 외에 다른 조건 ) { // 여러 번 쓸 수 있음!
+   해당 조건이 맞을 경우 실행되는 코드
+} else { // if의 반대 또는 조건이 하나만 남아 있을 경우
+   해당 조건이 맞을 경우 실행되는 코드
+}
+
+<boolean>
+ boolean a = ture 아니면 false  
+*boolean이라는 논리 자료형은 흔히 인터넷 사이트 약관 동의 체크박스나 라디오박스등에 쓰인다고함.
+또한 리턴 함수등에도 쓰인다고 함..
+
+<Scanner>
+ Scanner sc = new Scanner(System.in);
+/*여기에서 sc는 다른 변수 이름과 같으면 안된다....
+수학에서 변수 다르게 두는거랑 똑같음
+결국 sc라는 스캐너 개체가 생긴건데
+다른곳에서 sc라는 변수가 생기면 컴퓨터가 어떻게 구분할건데?
+그래서 겹치면 안된다는 것임.*/
+ System.out.print("성적을 입력해 주세요")
+ int aa = a.nextInt();
+
+[반복문]
+for
+while
+do~while이 셋 중 제일 빠름
+
+git 비번
+
+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

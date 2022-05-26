@@ -5,9 +5,14 @@
 package Questions0525;
 
 public class bounsQuestion2 {
-
+	
 	public static void main(String... args) {
-
+		int A=3;
+		int B;
+		int C;
+		do {
+			C=;
+		}while(B<=22);
 	}
 
 }
