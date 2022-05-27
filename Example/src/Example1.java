@@ -26,10 +26,7 @@ public class Example1 {
 			Try++;
 		}
 		System.out.printf("최종 금액 : %d원",total);
-		
-		
-		
-		
+		recepit.close();
 	}
 
 }

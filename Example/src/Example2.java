@@ -13,9 +13,9 @@ public class Example2 {
 		Scanner multi = new Scanner(System.in);
 		System.out.print("구구단에 대한 숫자를 입력하세요.>> ");
 		int Num = multi.nextInt();
+		
 		int n, m;
 		int total = 0;
-		
 		for (n = 1; n <= 9; n++) {
 			m = Num * n;
 			total += m;
@@ -26,7 +26,7 @@ public class Example2 {
 		} else {
 			System.out.println("홀수입니다.");
 		}
-		
+		multi.close();
 
 	}
 
