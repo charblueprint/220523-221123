@@ -1,16 +1,42 @@
-/*ÀÀ¿ë¹®Á¦ (0531)
- * ´ÙÀ½ ¹è¿­ °ªÀÌ ÀÖ½À´Ï´Ù. ÇØ´ç ¹è¿­ °ªÀ» ºñ±³ÇÏ¿© »ç¿ëÀÚ Á¤º¸¸¦ Ãâ·ÂÇÏ½Ã¿À
+/*ì‘ìš©ë¬¸ì œ (0531)
+ * ë‹¤ìŒ ë°°ì—´ ê°’ì´ ìžˆìŠµë‹ˆë‹¤. í•´ë‹¹ ë°°ì—´ ê°’ì„ ë¹„êµí•˜ì—¬ ì‚¬ìš©ìž ì •ë³´ë¥¼ ì¶œë ¥í•˜ì‹œì˜¤
  * 
  * Adata = hong kim park jang lee soun
  * Bdata = 80 100 46 38 65 88
  * 
- * °á°ú ¹è¿­¿¡ µû¸¥ Á¶°ÇÀº 60Á¡ ÀÌ»ó(Æ÷ÇÔ) Áß ÇÕ°ÝÀÚ¸¸ Ãâ·ÂÇÕ´Ï´Ù.
- * °á°ú¹è¿­ >> [hong,kim,lee,soun]*/
+ * ê²°ê³¼ ë°°ì—´ì— ë”°ë¥¸ ì¡°ê±´ì€ 60ì  ì´ìƒ(í¬í•¨) ì¤‘ í•©ê²©ìžë§Œ ì¶œë ¥í•©ë‹ˆë‹¤.
+ * ê²°ê³¼ë°°ì—´ >> [hong,kim,lee,soun]*/
 package Question0531;
 
 public class Q1 {
 
 	public static void main(String[] args) {
+		String data [][] = {{"hong", "kim", "park", "jang", "lee", "soun"},{"80", "100", "46", "38", "65", "88"}};
+		
+		int A = data[0].length;
+		int B = data.length;
+		
+		String newdata [] = new String [A];
+		int i = 0;
+		do {
+			int total = 0;
+			int total1 = 0;
+			int j =0;
+			do{
+				if(j==0){
+					total = data[i][j];
+				} else {
+					total1 = data[i][j];
+				}
+				j++;
+			}while(j<B);
+			newdata[i]=total+total1;
+			i++;
+		} while(i<A);
+		
+		if(newdata[i]>=60){
+			
+		}
 
 	}
 
