@@ -1,0 +1,18 @@
+1. Editor의 종류?
+
+2. Database의 종류
+
+3. Java에서 사용하는 자료형이 아닌 것은?
+
+4. Java에서 사용하는 구분언어가 잘못된것은?
+project란?
+package란?
+import란?
+class란?
+
+5. java에 대한 설명중 잘못된것은?(java역사 x, java의 특징 o)
+
+6. 다음 문법코드 중 잘못된 부분은?
+
+필기 : 다음 주 금요일
+실기 :  
