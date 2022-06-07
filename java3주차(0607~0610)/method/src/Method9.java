@@ -1,38 +1,39 @@
 import java.util.Arrays;
 
-/*ÀÀ¿ë¹®Á¦ #4*/
-/* °ü¸®ÀÚ¿¡¼­ ¸Ş´º¸¦ È°¼ºÈ­ÇÏ´Â ÇÁ·Î¼¼¼­ÀÔ´Ï´Ù. 
-ÇØ´ç ¸Ş´º È°¼ºÈ­´Â 2Â÷¹è¿­ÀÌ¸ç, ¸Ş´º¸í°ú È°¼ºÈ­ÇÏ´Â (Y,N)À¸·Î ±¸ºĞÇÕ´Ï´Ù.
-ÇØ´ç È°¼ºÈ­ °ªÀ» ´ëÀÔÇÏ¿© "Y"·Î Àû¿ëµÇ´Â ÀÎµ¦½º ¹øÈ£¿¡ ¸Â´Â ¸Ş´º¸íÀ» 
-1Â÷ ¹è¿­·Î Àç±¸¼º ÈÄ ¸ŞÀÎ¿¡¼­ Ãâ·Â µÇµµ·Ï ÇÕ´Ï´Ù. 
-[°á°ú] : [·ÎÄÏ¹è¼Û,·ÎÄÏÇÁ·¹½Ã,°ñµå¹Ú½º,ÀÌº¥Æ®,Ãß¼®]
-´Ü, private ¹× returnÀ» È°¿ëÇÏ¿© ÇÁ·Î±×·¥À» ÀÛ¼ºÇÕ´Ï´Ù.
+/*ì‘ìš©ë¬¸ì œ #4*/
+/* ê´€ë¦¬ìì—ì„œ ë©”ë‰´ë¥¼ í™œì„±í™”í•˜ëŠ” í”„ë¡œì„¸ì„œì…ë‹ˆë‹¤. 
+í•´ë‹¹ ë©”ë‰´ í™œì„±í™”ëŠ” 2ì°¨ë°°ì—´ì´ë©°, ë©”ë‰´ëª…ê³¼ í™œì„±í™”í•˜ëŠ” (Y,N)ìœ¼ë¡œ êµ¬ë¶„í•©ë‹ˆë‹¤.
+í•´ë‹¹ í™œì„±í™” ê°’ì„ ëŒ€ì…í•˜ì—¬ "Y"ë¡œ ì ìš©ë˜ëŠ” ì¸ë±ìŠ¤ ë²ˆí˜¸ì— ë§ëŠ” ë©”ë‰´ëª…ì„ 
+1ì°¨ ë°°ì—´ë¡œ ì¬êµ¬ì„± í›„ ë©”ì¸ì—ì„œ ì¶œë ¥ ë˜ë„ë¡ í•©ë‹ˆë‹¤. 
+[ê²°ê³¼] : [ë¡œì¼“ë°°ì†¡,ë¡œì¼“í”„ë ˆì‹œ,ê³¨ë“œë°•ìŠ¤,ì´ë²¤íŠ¸,ì¶”ì„]
+ë‹¨, private ë° returnì„ í™œìš©í•˜ì—¬ í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•©ë‹ˆë‹¤.
 */
 public class Method9 {
 
 	public static void main(String[] args) {
 		Menus M = new Menus();
-		String result[] = M.menu();
-		System.out.println(Arrays.toString(result));
+		System.out.println(Arrays.toString(M.menu()));
 	}
 
 }
 class Menus{
-	private String choose[]=new String[5];
 	private String origin[][];
+	private String choose[] = new String[5]; 
+	
 	public Menus(){
 		String Ms[][] = {
-				{"·ÎÄÏ¹è¼Û","·ÎÄÏÇÁ·¹½Ã","ÄíÆÎºñÁî","°ñµå¹Ú½º","ÀÌº¥Æ®","¼³³¯","Ãß¼®"},
+				{"ë¡œì¼“ë°°ì†¡","ë¡œì¼“í”„ë ˆì‹œ","ì¿ íŒ¡ë¹„ì¦ˆ","ê³¨ë“œë°•ìŠ¤","ì´ë²¤íŠ¸","ì„¤ë‚ ","ì¶”ì„"},
 				{"Y","Y","N","Y","Y","N","Y"}};
 		this.origin=Ms;
 	}
-	public String menu[]() {
-		int i=0;
+	public String[] menu() {
+		int i = 0,j=0;
 		do {
 			if(this.origin[1][i].equals("Y")) {
-				this.origin[0][i] = this.choose[i];
+				choose[j] = this.origin[0][i];
+				j++;
 			} i++;
-		}while(i<this.origin[0].length);
+		} while(i<this.origin[0].length);
 		
 		return this.choose;
 	} 
