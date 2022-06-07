@@ -27,14 +27,18 @@ class Menus{
 		this.origin=Ms;
 	}
 	public String[] menu() {
-		int i = 0,j=0;
+		int i = 0,j = 0;
+		String[] temp = new String[7]; // 기준에 맞는 것만 옮기기 위해 만들어진 temp
 		do {
 			if(this.origin[1][i].equals("Y")) {
-				choose[j] = this.origin[0][i];
-				j++;
+				temp[j] = this.origin[0][i]; // 조건에 맞는것만 옮기는 중
+				j++;//그럴때마다 temp의 계수와 this.origin의 계수가 하나씩 같이 증가
 			} i++;
 		} while(i<this.origin[0].length);
-		
+		choose = new String [j]; //choose가 temp와 연동
+		for(; j > 0 ;) { //for문 앞에 j=0있고, 실행문 안에 --j가 있음! *저 j>0마저 없으면 무한루프 돈다고함
+			choose[--j] = temp[j];			
+		}
 		return this.choose;
-	} 
+	}
 }
