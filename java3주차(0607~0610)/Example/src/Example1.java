@@ -15,33 +15,51 @@ A파트 : PC random,Scanner X5
 B파트 : PC에서 랜덤 숫자와 사용자가 뽑은 숫자를 비교 및 결과 처리
  */
 public class Example1 {
+	/*
+	 * 1.<일반 random 형식 (random double 자료형)> -> int PC_pick = (int) (Math.random() * 10 + 1);
+	 */
 
-	// 랜덤으로 숫자 하나 뽑음
+	/*
+	 * 2. <util을 이용한 random 형식> -> Random R = new Random(); int PC_pick = R.nextInt(10)+1;
+	 */
+
 	public static void main(String[] args) {
-		String msg[] = { "1~10까지 번호중 하나의 번호를 입력하세요 >> ", "UP!", "DOWN!","정답입니다!!", "시스템을 종료합니다." };
+		String msg[] = { "1~10까지 번호중 하나의 번호를 입력하세요 >> ", "UP!", "DOWN!", "정답입니다!!", "시스템을 종료합니다." };
 		Scanner sc = new Scanner(System.in);
-		int PC_pick = (int) (Math.random() * 10 + 1);
+		int PC_pick = (int) (Math.random() * 10 + 1); // 랜덤으로 숫자 하나 뽑음
 
 		int count = 5;
 		while (count >= 1) {
-			System.out.printf("총 기회는 %d번 남았습니다."+ msg[0], count);
-			int Choose = sc.nextInt();
+			System.out.printf("총 기회는 %d번 남았습니다." + msg[0], count);
+			int Choose = sc.nextInt(); // 사용자가 숫자 입력
 			Example2 E2 = new Example2();
-			E2.User(Choose, PC_pick);
-			
-			String answer = E2.PC(); // 정한 숫자만 받음. //여기까진 잘 나옴
-			if (answer.equals(msg[3])) {
-				System.out.printf("%s\n%s", answer, msg[4]);
+			E2.User(Choose, PC_pick, null);
+
+			String answer = E2.PC(); // 정한 숫자만 받은 상태
+
+			int check = answer.indexOf("정답"); // indexOf => 특정 단어만 찾아주는 함수(int를 써야함!) -1 : 미존재 / 0 : 존재
+			if (check == 0) {
+				System.out.printf("%s\n%s", msg[3], msg[4]);
 				System.exit(0);
-			} else if(answer.equals(msg[1])){
-				System.out.println(answer);
-				count--;
-			} else if(answer.equals(msg[2])) {
-				System.out.println(answer);
-				count--;
+				System.gc();
+			} else {
+				if (answer.equals(msg[1])) {
+					System.out.println(answer);
+					count--;
+				} else if (answer.equals(msg[2])) {
+					System.out.println(answer);
+					count--;
+				}
 			}
-
 		}
+		sc.close();
+		PC_pick = 0;
+		System.gc();
 	}
-
+	
 }
+
+//		if(count==0) {
+//				System.out.println("게임 오버! 다시 도전하세요\n"+msg[4]);
+//				System.exit(0); //이거 구현하고 싶어요 도와주세여
+//			} 
