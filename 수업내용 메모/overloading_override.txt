@@ -1,0 +1,16 @@
+public void b(){
+}
+public void b(){ (x) <= 같은 객체, 이름,자료형은 실행 x
+}
+public void b(String A){ (o)
+}
+public void b(String B){ (x)
+}
+public void b(int A){ (o)
+}
+public void b(double A){ (o)
+}
+public void b(boolean A){ (o)
+}
+오버로딩은 부모, 자식 둘 다 o
+오버라이드는 자식만
