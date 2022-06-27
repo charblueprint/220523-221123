@@ -1,0 +1,37 @@
+[전송 형태의 프로토콜]
+TCP : 연결 프로토콜으로, 전송 속도가 빠릅니다.
+UDP : 사용자 데이터 프로토콜으로, 전송 속도가 느립니다.(일대일의 경우 굉장히 빠름)
+
+[PORT] - TCP
+80 : WEB(가상포트)
+21 : FTP (파일전송시 사용)
+22 : SSH - Linux, Unix (파일 전송, 서버 외부 접속)
+23 : TELNET - window (서버 외부 접속)
+25 : SMTP (메일 서버) - 메일 보내기
+110 : POsP3 (메일 받기) - 문자, 파일 받기
+143 : IMAP (메일 받기) - 문자, 파일 받기
+*IMAP의 경우 서버와 동기화되어 삭제시 파일이 서버에 남아있지만,
+POP3의 경우 서버와 비동기화 상태여서 삭제시 복구가 불가능합니다.
+443 : WEB (https://)
+
+SNMP : UDP(문자발송시스템), VPN(가상IP) - UDP
+
+#12번째 줄
+URL : 네트워크 경로를 말합니다.
+
+#18번째 줄 
+.getContentLength() : indexOf의 기능과 동일합니다
+-1 : 파일이 존재하지 X
+
+#20번째 줄
+.getContentType() : 파일속성을 확인하는 부분으로, 컨텐츠의 타입을 출력합니다.
+
+#30번째 줄
+.openStream() : URL에서만 사용합니다.
+
+#38번째 줄~
+while ((imgdata=bi.read(data))!=-1) {
+			fo.write(data,0,imgdata); // 조각난 파일을 붙여넣기 하는 상태
+			cnt += imgdata;
+			System.out.println("다운로드 중...." + "(cnt*100)/imgsize"  + "%");
+		}											-> 이게 공식임다
