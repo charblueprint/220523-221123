@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML 2일차 HTML4.0+CSS2.0</title>
+<style>
+/*태그에 그대로 적용시 .과 #을 사용하지 않음*/
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.box {
+	width: 50px;
+	height: 50px;
+	background-color: red;
+}
+
+.color1 {
+	background-color: orange;
+	margin-top: 20px;
+}
+
+.color2 {
+	background-color: yellow;
+	margin-left: 20px;
+}
+
+.color3 {
+	background-color: green;
+	margin-left: -20px;
+}
+
+.color4 {
+	background-color: blue;
+	margin-top: -20px;
+}
+
+.bigbox {
+	width: 50px;
+	height: 50px;
+	background-color: purple;
+	padding-left: 450px;
+	padding-top: 450px;
+}
+/*padding은 늘어나면 padding만큼 커짐 단,padding 적용시 오브젝트의 width와 height가 늘어남*/
+/* margin에서 사용가능한 옵션 : left, right, bottom, top -<마이너스>(n)px 사용 시 위치를 당김
+※자식 태그에 잘못 설정하면 부모태그까지 같이 움직임 그렇기에 자식태그에 쓰기보다는 최상위 부모태그에 사용하는 것을 추천함.*/
+.smallbox {
+	width: 30px;
+	height: 30px;
+	background-color: maroon;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.ssbox {
+	width: 10px;
+	height: 10px;
+	background-color: white;
+}
+
+/*margin : 바깥쪽, padding : 안쪽
+사용시 0을 사용해서 공백을 없앤다.*/
+</style>
+</head>
+<body>
+	<input type="text" value="hong" disabled="disabled">
+	<!-- disabled : 보이긴 하나 사용을 안함. 백엔드로도 해당 값이 전달도 안 되는 설정값임
+	 readonly와 비슷하다. 그러나 readonly는 값을 넘기기라도 하지만 disabled는 값을 안 넘긴다는 것에서 차이가 존재.
+	 주로 결제할 때 은행 점검시간이거나 시스템에 문제가 발생해서 진행하지 못 하는 경우(사용자에게 서비스를 제공하지 못하는 경우) 임시로 막아두는 역할로써 쓰임. -->
+	<br>
+	<input type="radio" checked> 신한카드
+	<input type="radio"> 국민카드
+	<input type="radio" disabled> 하나카드
+	<!-- 이러면 하나카드가 점검중인것. -->
+	<div class="box">박스1</div>
+	<div class="box color1">박스2</div>
+	<div class="box color2">박스3</div>
+	<div class="box color3">박스4</div>
+	<div class="box color4">박스5</div>
+	<div class="bigbox">
+		<div class="smallbox">
+			<div class="ssbox"></div>
+		</div>
+	</div>
+</body>
+</html>
