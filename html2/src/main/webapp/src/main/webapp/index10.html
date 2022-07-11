@@ -1,0 +1,47 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML 2일차 HTML 4.0 + css 2.0</title>
+</head>
+<body>
+	<!-- 목차리스트 태그들 -->
+	<!-- ul : li 개수만큼 목차리스트가 추가됩니다. -->
+	<ul>
+		<li>공지사항1</li>
+		<li>공지사항2</li>
+		<li>공지사항3</li>
+		<li>공지사항4</li>
+	</ul>
+	<br>
+	<!-- ol : 숫자로 리스트 목차를 구분합니다. -->
+	<ol>
+		<li>공지사항1</li>
+		<li>공지사항2</li>
+		<li>공지사항3</li>
+		<li>공지사항4</li>
+	</ol>
+	<br>
+	<!-- span은 공간 오브젝트 태그입니다. span은 width,height를 적용하기 위해서 display를 무조건 사용해야 합니다.-->
+	<!-- border-style: solid(외곽선)
+		 border-width: 선 두께
+		 border-color: 선 색상
+	 -->
+	<!-- display(출력형태 구분) : block(출력),none(미출력)-->
+	<span
+		style="border-style: solid; border-width: 1px; border-color: black">
+		홍길동입니다. </span>
+	<span
+		style="border: 1px solid skyblue; width: 500px; height: 50px; display: block;">
+	</span>
+	<br>
+	<!-- div : span과 동일한 레이아웃 태그입니다. 단, display를 사용하지 않아도 사이즈 변경이 가능합니다. -->
+	<div style="border: 1px solid red; width: 100px; height: 100px;">
+	</div>
+	<br>
+	<!-- strike는 HTML 4.0(취소선 사용 가능해짐) -->
+	<strike style="color:red;">5,500원</strike>
+	<!-- HTML 5.0버전 마크업이 아니라 시멘틱 마크업-->
+	<s>12,000원</s>
+	
+</body>
+</html>

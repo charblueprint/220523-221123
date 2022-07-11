@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML 3일차 CSS2.0 응용 및 검색바 만들기</title>
+	<style>
+	body{ margin: 0; padding: 0; }
+	.box{ width: 100px; height: 100px; background-color: SandyBrown; border-radius: 50px 50px 0px 50px;}
+	/*border-radius : 왼쪽 상단, 오른쪽 상단, 오른쪽 하단, 왼쪽 하단*/
+	.box2{ width: 100px; height: 100px; background-color: LightCoral; border-radius: 50px 0px 50px 50px;}
+	.btn{ width: 200px; height: 30px; background-color: orange; color: yellow; border: 0;}
+	.mid{ width: 200px; height: 30px; border: 0; border-bottom: 2px solid LightSalmon; color: BurlyWood; }
+	.search{ width: 586px; height: 57px; background-image: url("./search.png"); position: relative;}
+	.s{ width: 450px; height: 50px; position: absolute; top: 3px; left: 3px; border: 0px; font-size: 16px; font-family: "맑은 고딕"; outline: none; 
+	text-indent: 5px;}
+	.linkbox{ width: 110px; height: 305px; border: 2px solid black; list-style: none; margin: 0; padding: 0; }
+	.menu_link{ width: 110px; float: left;}
+	</style> 
+</head>
+<body>
+	<div class="box"></div>
+	<div class="box2"></div>
+	<input type="button" value="LOGIN" class="btn">
+	<input type="text" class="mid">
+	<br> <br>
+	<form name="a" id="a" method="get" action="https://search.naver.com/search.naver">
+		<div class="search">
+			<input type="text" name="query" class="s">
+		</div>
+	</form>
+	<br>
+	>> 쇼핑 사이트 링크모음
+	<ul class="linkbox">
+		<li class="menu_link"> <a href="https://www.gmarket.co.kr/"> </a> <img src="./logo_quick_01.png"> </li>
+		<li class="menu_link"> <a href="https://www.auction.co.kr/"> </a> <img src="./logo_quick_02.png"> </li>
+		<li class="menu_link"> <a href="https://www.halfclub.com/"> </a> <img src="./logo_quick_03.png"> </li>
+		<li class="menu_link"> <a href="https://www.gmarket.co.kr/"> </a> <img src="./logo_quick_04.png"> </li>
+		<li class="menu_link"> <a href="https://www.gmarket.co.kr/"> </a> <img src="./logo_quick_05.png"> </li>
+		<li class="menu_link"> <a href="https://www.coupang.com/"> </a> <img src="./logo_quick_06.png"> </li>
+	</ul>
+	
+</body>
+</html>

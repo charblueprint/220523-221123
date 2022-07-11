@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Padding, Margin</title>
+<style>
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.box1 {
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	/*margin-left: 10px; margin-top: 10px; margin-bottom: 10px;*/
+	margin: 10px 0 10px 10px;
+	float: left;
+}
+/* margin: (margin-top)px (margin-right)px (margin-bottom)px (margin-left)px 
+ =>(12시 3시 6시 9시) 모든 방향에 같은 수치를 적용하고싶을경우 한방에 때리는 코드
+margin-bottom: 자신 기준으로 아래쪽에 있는 오브젝트를 밑으로 밀어냄
+margin-right : 오른쪽에 오브젝트 있을 경우에 간격띄울때 사용*/
+.box2 {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	float: left;
+	/*float: left => 자신 기준으로 왼쪽 정렬
+float: center=> 자신 기준으로 가운데로 정렬
+float: right=> " 오른쪽으로 정렬*/
+}
+
+.box3 {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	clear: both;
+} /*clear: both => float 사용시 위치 초기화 시키기 위해서 사용*/
+.ulcss {
+	list-style: none;
+	margin: 0px; padding: 0px;
+	/*list-style: none;를 쓰면 공간이 남기때문에 그거 없어려고 쓰는거라 둘이 세트로 항상 쓰임*/
+	float:right;
+	margin-right: 30px;
+}
+.licss{
+	width: 200px;
+	height: 30px;
+	border: 1px solid black;
+	float: left;
+	text-align: center;
+	line-height: 30px;
+}
+/*float을 자식태그에서만 left로 설정시 역순을 정렬됨-> 부모태그에서 float:right를 통해 순방향으로 정렬되도록함. */
+</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<ul class="ulcss">
+		<li class="licss">1</li>
+		<li class="licss">2</li>
+		<li class="licss">3</li>
+		<li class="licss">4</li>
+		<li class="licss">5</li>
+	</ul>
+</body>
+</html>

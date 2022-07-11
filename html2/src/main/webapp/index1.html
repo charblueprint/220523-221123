@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML 3일차 HTML4.0</title>
+<style>
+body{ margin: 0; padding: 0; } 
+div{ width: 100px; height: 100px; }
+.a{ background-color: pink; position: static; }
+.b{ background-color: Mediumpurple; position: relative; left: 100%; margin-left: -100px; }
+.c{ background-color: DarkOrchid; }
+.d{ background-color: Magenta;  position: absolute; right: 0px; }
+.popup{ width: 600px; height: 600px; background-color: PaleVioletRed; display: block; position: relative;}
+/*부모가 relative일 경우 */
+.close{ width: 50px; height: 50px; background-color: Gray; position: absolute; left: 100%; font-size: 25px; font-weight: bold; color: white;
+text-align: center; line-height: 50px; }
+/* 
+position : 오브젝트의 성격을 변화시킬때 사용하는 속성
+static(고정), relative(중간형태 margin,top,left,right,bottom)
+absolute(자유분방함)
+부모 클래스와 자식 클래스에서의 설정이 중요함. relative-absolute던지 absolute-relative여야 함.
+*/
+</style>
+</head>
+<body>
+<div class="a"></div>
+<div class="b"></div>
+<div class="c"></div>
+<div class="d"></div>
+<span class="popup">
+<div class="close" onclick="abc()"> X </div>
+</span>
+</body>
+<script type="text/javascript">
+function abc() {
+	document.getElementById("popup").style.display="none";
+}
+</script>
+</html>

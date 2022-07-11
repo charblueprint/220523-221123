@@ -1,0 +1,65 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML 2일차 Padding</title>
+<style>
+.olcss {
+	width: 150px;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid red;
+}
+/*부모태그의 width가 없을 경우 자동적으로 100% 적용됨(빈 공간까지 모두 사용 = 오류작동)
+자식태그의 width와 맞춰주는 것이 좋다. float을 사용하지 않을 경우 높이는 자동적으로 적용*/
+
+.olcss2 {
+	width: 760px;
+	height: 32px;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid red;
+}
+
+.licss {
+	width: 140px;
+	height: 30px;
+	border: 1px solid black;
+/* 	padding-left: 10px; */
+	padding: 0px 0px 0px 10px;
+	/*※WARNNING: padding을 사용하게 되면 원래 위치에서 그만큼 밀리는 거라 width에서도 밀리는 거리를 생각하고 조절해줘야해!! */
+}
+.licss:hover{
+	background-color: rgb(128, 128, 255);
+} /*hover  :커서가 위에 있으면 동작됨 */
+
+.licss2 {
+	width: 150px;
+	height: 30px;
+	border: 1px solid black;
+	float: left;
+}
+/*자식태그에서 float을 써버려서 부모태그에서 height,width값이 사라진 상태-> 부모태그에서 크기를 조절 */
+/*자식과 부모의 가로,세로크기와 동일해야 클릭범위를 적절하게 맞출 수 있음 넉넉하게 2~3px더 잡을 것*/
+</style>
+</head>
+<body>
+
+	<ol class="olcss">
+		<li class="licss">1</li>
+		<li class="licss">2</li>
+		<li class="licss">3</li>
+		<li class="licss">4</li>
+		<li class="licss">5</li>
+	</ol>
+	<br>
+	<ol class="olcss2">
+		<li class="licss2">1</li>
+		<li class="licss2">2</li>
+		<li class="licss2">3</li>
+		<li class="licss2">4</li>
+		<li class="licss2">5</li>
+	</ol>
+</body>
+</html>
