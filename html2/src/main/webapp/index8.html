@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, inital-scale=1.0">
+<!-- viewport : 컴퓨터의 화면과 휴대폰의 화면이 동일하도록 만들어줌. -->
+<title>HTML4일차 HTML5.0 + CSS 3.0</title>
+<!-- 모바일 사이즈 : 340 ~ 580px(원스크린) / 720px(투스크린) -->
+</head>
+<body>
+<input type="number"><!-- 숫자만 입력하는 디바이스 형태(모바일 전용) -->
+<br>
+<input type="color"><!-- 컬러픽커(모바일 + PC에 사용가능) -->
+<br>
+<input type="tel"><!-- 전화번호 디바이스 형태(모바일 전용) -->
+<br>
+<input type="date"><!-- 달력 디바이스 형태(모바일+PC) -->
+<br>
+<input type="time"><!-- 시간 디바이스 형태(모바일+PC) -->
+<br>
+<input type="week"><!-- 주일 표시(모바일+PC) -->
+<br>
+<input type="email"><!-- email을 입력하는 전용 input(모바일) -->
+<br>
+<input type="datetime-local"> <!-- 날짜와 시간을 동시에 입력받음(모바일+PC) -->
+<br> <form oninput="aa.value=parseInt(a.value)">
+<!-- oninput : input+output 사용시 적용되는 속성 -->
+min:1<input type="range" min="1" max="10" id="a">max:10
+<!-- range : 범위선택 속성입니다. min: 최소 max:최대 -->
+<br>
+<output  for="a" name="aa" value="5">5</output>
+<!-- output : input에 대한 값을 받아서 출력하는 태그(for,name) -->
+</form>
+<br>
+<input type="image" src="./logo_quick_01.png">
+<!-- 이미지 버튼을 사용할때 사용하는 속성입니다. -->
+<br>
+<form method="post" action="https://naver.com">
+<button type="button">로그인</button></form>
+<!-- button : input type중 버튼에 (submit/reset/button) 해당함. 사항만 추려서 button이라는 태그로 전환 하였습니다. 
+단, 사용시 type="button"을 사용하지 않으면 기본설정인 submit으로 작동함.-->
+</body>
+</html>
