@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.tablecss {
+	position: relative;
+	width: 450px;
+}
+
+.tablecss>span {
+	display: block;
+	width: inherit;
+	height: 120px;
+	overflow: auto;
+}
+.tablecss>span>table {
+	display: block;
+	width: 100%;
+}
+.tablecss>span>table>caption {
+	position: absolute;
+	width: 430px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	background: gray;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.tablecss>span>table>thead>tr {
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	height: 25px;
+	width: 430px;
+	background-color: white;
+	z-index: 1;
+}
+.tablecss>span>table>tbody>tr{ position: relative; top: 40px;}
+.tablecss>span>table>tbody>tr>td {
+	width: 150px;
+	
+}

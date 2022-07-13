@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+ol, ul {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.box1 {
+	width: 100px;
+	height: 100px;
+	background-color: #A0AFFF;
+	padding-left: 50px;
+}
+
+.box2 {
+	width: 100px;
+	height: 100px;
+	background-color: #90AFFF;
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+/*box-sizing: border-box; : padding, border도 적용 되어짐. 테두리와 안쪽 여백의 크기도 요소의 크기로 고려합니다. 
+그니까 사용자가 설정한 크기에 다른 옵션들 넣어야 되는것도 고려해서 만든다고*/
+.box3 {
+	width: 100px;
+	height: 100px;
+	border: 1px solid blue;
+}
+
+.box4 {
+	width: 100px;
+	height: 100px;
+	border: 1px solid blue;
+	box-sizing: border-box;
+}
+/*nth-child(DOM)
+nth-of-type(NODE)*/
+.ulcss>li:nth-child(1) {
+	color: #6E9FED;
+}
+
+.ulcss>li:nth-child(4) {
+	color: #6E9FED;
+}
+
+.ulcss>li:nth-child(5) {
+	color: #6E9FED;
+}
+/*자바에서는 배열이 0번서부터 시작하는데 여기 node는 1번 부터 시작해*/
+.olcss>li:nth-child(2) {
+	color: #0A82FF;
+}
+
+.olcss>li:nth-child(3) {
+	color: #0A82FF;
+}
+
+.olcss>li:nth-child(4) {
+	color: #0A82FF;
+}
+/*DOM-> nth-child : 자식태그를 순서대로 나열함*/
+.div1>span:nth-child(4) { color: red; }
+/*NODE-> nth-of-type : 태그 종류별로 묶어서 node 숫자로 처리한다.*/
+.div2>span:nth-of-type(3) { color: red; } 
+.div2>label:nth-of-type(2) { color: orange; }
+
+/* DOM */
+.object1{}
+.object1 > span {
+	width: 50px;
+	height: 50px;
+	background: blue;
+}.object1 > span:nth-child(2) {
+	background-color: yellow;
+}.object1 > span:nth-child(odd) { 
+	background-color: red;
+}/*odd(홀수), even(짝수)*/
+
+.object2 {}
+.object2 > span, .object2 > label {
+	width: 50px;
+	height: 50px;
+	background-color: blue;
+}
+.object2 > span:nth-of-type(even), .object2 > label:nth-of-type(odd) {
+	background-color: darkred;
+}
