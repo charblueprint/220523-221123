@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript 2일차 외부 api js 연결</title>
+<script src="http://192.168.100.203:8080/jsp1/js8.js"></script>
+<script>
+	function return1(ca) {
+		var total1 = ca / 3;
+		return total1;
+	}
+	function return2(cb) {
+		var msg = "홍길동님 최종 결제 금액은" + cb + " 입니다.";
+		return msg;
+	}
+	call1();
+	call2();
+
+	var data = [ 1, 2, 3, 4, 5 ]; //숫자 배열
+	console.log(data[0]); //배열[인덱스번호]
+	var data2 = [ "홍길동", "이순신", "강감찬" ];//문자배열
+	// 	console.log(data2[1]);
+
+	var ea = data2.lenght;
+	console.log(ea);
+	var w = 0;
+	while (w < ea) {
+		console.log(data2[w]);
+		w++;
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

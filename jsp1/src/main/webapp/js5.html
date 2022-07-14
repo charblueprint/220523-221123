@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Javascript 2일차 함수(function)</title>
+<script>
+	function a() { //일반함수
+		console.log("홍길동");
+	} //java와의 다른점  : java는 어디있든 선언을 하면 끌고 내려올수 있었는데 javascript는 위에서 선언을 하지않으면 사용 불가. 
+	a(); //함수를 실행한다. 단, function보다 아래에 있어야 합니다. 
+	//당연하지! 위에서 선언 안 하면 못 쓴다는게 Javascript의 가장 큰 특징이라며 
+	function b(num) { //일반함수
+		console.log(num);
+	}
+	var z = 10; //변수 z
+	b(z);	//b함수에 숫자 인수값을 적용하여 호출
+	
+	function z() { //함수 z
+		zz(); //외부 zz라는 함수로 호출함
+	}
+	function zz() { //함수 zz
+		console.log("환영합니다.");
+	}
+	z(); //이거 충돌나는 이유 : 변수 z를 선언하는건지 함수 z를 선언하는건지 생성자가 중복되어서 
+	//setter,getter(java) => call 함수, return함수
+	function setter(n) {
+		var result = getter(n); //result변수로 return된 값을 받습니다.
+		console.log(result);	//결과 출력
+	} function getter(nn) {	// setter 함수에서 전달 받음
+		var cal = nn + 20; //전달받은 값과 추가 값을 계산
+		return cal; //dhlwhd 결과값을 return 시킴
+	} 
+	settter(5);
+</script>
+</head>
+<body>
+
+</body>
+</html>
