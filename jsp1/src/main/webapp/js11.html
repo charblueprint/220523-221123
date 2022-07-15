@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="EUC-KR">
+<meta http-equiv="X-UA-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width; inital-scale=1.0">
+<title>javascript 3일차 HTML+Javascript 1</title>
+<script>
+//function(일반함수,리턴함수,핸들링함수)
+	function abc() {
+	/*	#1
+		var id = document.getElementById("mid"); 
+		//html의 id값을 가져와서 js변수로 이관함
+		console.log(id.value); //해당 아이디 값을 가져오는 역할을 한다!
+		id.readOnly=true;	//readOnly (읽기전용)
+		
+		#2
+		var id = document.getElementById("mid").value;
+		console.log(id);
+		document.getElementById("mid").readOnly=true;
+		
+		둘 중에 뭐가 편해보이니? */
+		
+		var id = document.getElementById("mid");
+		var pw = document.getElementById("mpass");
+		if (id.value==""){ //해당 아이디 칸이 비어있을 경우
+			alert("아이디를 입력하세요"); 
+			//alert : 지정한 경고문구를 띄우는 명령어 
+			id.focus();// focus() : 커서를 해당 오브젝트에 적용할때 사용 
+		} else if (pw.value=="") {
+			alert("패스워드를 입력하세요");
+			pw.focus();
+		} else {
+			/* form id 사용시 */
+			/*var f = document.getElementById("frm");
+			f.submit();*/
+			
+			/* form name 사용시 */
+			//frm.submit();
+			//submit() : method+action 발동시키는 함수
+		}
+	}
+</script>
+</head>
+<body>
+<form id="frm" name="frm" method="post" action="https://naver.com">
+	<input type="text" id="mid" name="mid">
+	<input type="password" id="mpass" name="mpass">
+	<input type="button" value="확인" onclick="abc();">
+	<!-- onclick: button에서 사용하는 속성입니다. 
+		 클릭시 특정 행동을 위의 script안의 function abc()에서 하도록 지정하는 속성값이다.
+		 onclick은 submit,reset에서는 사용하지 않습니다.  -->
+</form>
+</body>
+</html>
