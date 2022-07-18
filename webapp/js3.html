@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript 4일차 random 함수</title>
+<script>
+	var a = Math.random() * 1;
+	//-> Math.random() : 기본은 소수점입니다!
+	console.log(a);
+	var b = Math.ceil(Math.random() * 1);
+	//-> ceil : 수학용어로 올림을 의미합니다. 0.5=1
+	console.log(b);
+	var c = Math.floor(Math.random() * 1);
+	//-> floor : 수학용어로 내림
+	console.log(c);
+	var d = Math.round(Math.random() * 1);
+	//-> round : 수학용어로 반올림
+	console.log(d);
+
+	/*응용문제1
+	PC에 1~20까지 숫자가 있습니다.
+	해당 숫자를 자동으로 총 5번 뽑을 수 있는 javascrpit 코드를 작성하시오.*/
+	var i = 1;
+	do {
+		var num = Math.ceil(Math.random() * 10);
+		//console.log(num);
+		i++;
+	} while (i < 6);
+
+	function number() {
+		var total = "";
+		var f = 0;
+		var num2;
+		while (f < 5) {
+			num2 = Math.floor(Math.random() * 10);
+			total += num2;
+			f++;
+		}
+		fr.product_code.value=total;
+	}
+</script>
+</head>
+<body>
+	<form name="fr" id="fr">
+	<input type="text" name="product_code" readonly maxlength="5">
+	<input type="button" value="상품코드 생성" onclick="number()">
+	</form>
+</body>
+</html>

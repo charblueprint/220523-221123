@@ -1,0 +1,33 @@
+<!DOCTYPE.html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta meta http-equiv="Imagetoolbar" content="no">
+<title>javascript 4일차 파라미터 전달(Form, location)+js7_2.html</title>
+
+<script>
+var url = window.location.search;
+var sp = url.split("&ddd=");
+var result1 = sp[1];
+var sp2 = sp[0].split("?eee=");
+var result2= sp2[1];
+
+
+</script>
+</head>
+
+<body>
+<!-- 파라미터 출력 -->
+	<fieldset>
+		<legend> 결과 </legend>
+		아이디 : <span id="result1"> </span> <br> 국적 : <span id="result2">
+		</span>
+	</fieldset>
+</body>
+<script>
+// document.getElementById("user_id").append("hong");
+document.getElementById("result1").innerText = result1;
+document.getElementById("result2").innerText = result2;</script>
+</html>

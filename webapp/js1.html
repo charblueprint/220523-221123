@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>javaScrpit 4일차</title>
+<script>
+	function abc() {
+		if(frm.search.value==""){
+			alert("검색할 단어를 입력하세요.");
+			return false;
+		}
+		else {
+			//return true;
+			//return;
+			frm.submit();
+			//submit : return를 필수 사용하는 속성입니다. 
+			//onsubmit에 false 보낼 시 다른 링크로 움직이지 못하게 하고 true를 보냈을 때에만 움직이도록 만듦.
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="frm" id="frm" method="post" action="naver.com" onsubmit="return abc();">
+	<!-- onsumbit : form 태그에서만 사용됩니다. -->
+		<input type="text" id="search" name="search"> 
+		<input type="submit" value="검색">
+	</form>
+</body>
+</html>
