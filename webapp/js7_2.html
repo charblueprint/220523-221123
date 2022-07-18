@@ -9,25 +9,24 @@
 
 <script>
 var url = window.location.search;
-var sp = url.split("?ddd=");
+var sp = url.split("&eee=");
 var result1 = sp[1];
-var sp2 = sp[0].split("&eee=");
+var sp2 = sp[0].split("?ddd=");
 var result2= sp2[1];
-
-
 </script>
 </head>
 
 <body>
-<!-- 파라미터 출력 -->
+<!— 파라미터 출력 —>
 	<fieldset>
 		<legend> 결과 </legend>
-		아이디 : <span id="result1"> </span> <br> 국적 : <span id="result2">
+		아이디 : <span id="result2"> </span> <br> 국적 : <span id="result1">
 		</span>
 	</fieldset>
 </body>
 <script>
 // document.getElementById("user_id").append("hong");
-document.getElementById("result1").innerText = result1;
-document.getElementById("result2").innerText = result2;</script>
+document.getElementById("result2").innerText = result2;
+document.getElementById("result1").append(result1);
+</script>
 </html>
