@@ -1,0 +1,55 @@
+<!DOCTYPE.html>
+<!-- 숙제 링크 : http://mekeyace.kbsn.or.kr/basket.pdf -->
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta meta http-equiv="Imagetoolbar" content="no">
+<title>Javascrpit 5일차 장바구니 선택창</title>
+</head>
+<body>
+<form id="f" name="f" method="post" action="./2.html">
+<span>장바구니 시스템[구매하실 과일을 선택하세요(2가지 이상)] </span>
+<br>
+<span id="basket">
+
+</span>
+<input type="button" value="신청 완료" onclick="ch()">
+</form>
+</body>
+<script>
+	function name() {
+		var count=0;
+		var k=0;
+		while (k<b.length) {
+			if(f.fr[r].checked==true){
+				count++;
+			}
+			k++;
+		}
+		if(count<2){
+			alert("해당 구매하실 과일은 2가지 이상을 선택해야 합니다.");
+		} else{
+			f.submit();
+		}
+	}
+	
+	var b = ["사과","딸기","바나나","키위","파인애플","수박","참외"];
+	var r = 0;
+	var html,html2,html3,text;
+	do{
+		html = document.getElementById("basket");
+		html2 = document.createElement("label");
+		html3 = document.createElement("input");
+		html3.type="checkbox";
+		html3.name="fr";
+		html3.value=r;
+		text = document.createTextNode(b[r]);
+		html2.append(html3)
+		html2.append(text);
+		html.append(html2);
+		r++;
+	} while (r<b.length);
+</script>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"
+<title>Javascript 5일차 all checkbox 기능</title>
+<script>
+	function abc() {
+		var me = document.getElementById("all");
+		/*	<가장 단순한 버전 => 조건문 + 반복문 2개>
+				if (me.checked == true) {
+					var w = 1;
+					while (w <= 5) {
+						document.getElementById("ct" + w).checked = true;
+						w++;
+					}
+				} else {
+					var w = 1;
+					while (w <= 5) {
+						document.getElementById("ct" + w).checked = false;
+						w++;
+					}
+				}														*/
+
+		/* <두번째 방법 => 조건문 형태> */
+		var useck;
+		if (me.checked == true) {
+			useck = true;
+		} else {
+			useck = false;
+		}
+		/* <세번째 방법 => 삼항 연산식> 
+		 =>  me.checked==true?(useck=true):(useck=false); 를
+		 var me = document.getElementById("all").checked;로 변경하면 
+		 이것도 더 줄여서 me==true ? (useck=true):(useck=false) 로 줄일 수 있음 */
+
+		/* 하위 반복문 ver.1
+		var w = 1;
+		while (w <= 5) { //하위 오브젝트에 대한 id값으로 모두 true,false로 적용
+			document.getElementById("ct" + w).checked = useck;
+			w++;
+		} */
+
+		/* 하위 반복문 ver.2 */
+		/* var w = 0;
+		while (w <= 4) {
+			frm.ct[w].checked = useck;
+			w++;
+		}										*/
+
+		/* 부록 */
+		var ea = frm.ct.length;
+		console.log(ea);
+		//=>이건 name 속성 지정값이 같을 경우에만 사용 가능함.
+		/* => 그럼 name 속성의 지정값이 다르면 어떻게 해야하나요?
+			A) 우선순위 그룹으로 빈 태그를 묶어야 합니다.	*/
+			
+		/*var node = document.getElementById("cts").childNodes; 
+		.childNodes => 해당 부모태그 기준으로 하위 태그를 말함. / ecma5 쪽 태그라서 분리 할 줄 알아야해!!
+		단, text(코드상 enter를 적용 or 실제 문자가 적용되어 있을 경우)도 같이 찍혀 이 데이터들을 가공하기 
+		어려워지기 때문에 아래 방법으로 바꿔 씁니다. 
+		※ childnodes는 해당 하위태그에 br을 적용한 상황일 경우, 추가 작업을 적용하는 범위가 커지므로 사용하지 않음
+		적용 예시)
+		<li> <label> <input type="checkbox" name="ct" id="ct1"> no1 </label> <br>
+		=>이렇게 <li>을 사용하면 했지 childnodes 안 쓴다고.*/
+		
+		var node = document.getElementById("cts").children;
+		var ea2=0;
+		var w=0;
+		while (w<node.length) {
+			if(node[w].nodename=="INPUT"){
+				ea2++;
+			}
+			w++;
+		}
+		console.log(ea2);
+	}
+</script>
+</head>
+<body>
+	<form name="frm" id="frm">
+		<label> 
+			<input type="checkbox" name="all" id="all" onclick="abc();"> 전체 선택 
+		</label> <br> 
+		<span id="cts"> 
+		<label> <input type="checkbox" name="ct" id="ct1"> no1 </label> <br> 
+		<label> <input type="checkbox" name="ct" id="ct2"> no2 </label> <br> 
+		<label> <input type="checkbox" name="ct" id="ct3"> no3 </label> <br> 
+		<label> <input type="checkbox" name="ct" id="ct4"> no4 </label> <br> 
+		<label> <input type="checkbox" name="ct" id="ct5"> no5 </label> <br>
+		</span>
+	</form>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE.html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta meta http-equiv="Imagetoolbar" content="no">
+<title>Javascript 5일차 응용문제 #1</title>
+<style>
+.nextbutton {
+
+}
+</style>
+</head>
+<script>
+ function changevalue() {
+	var nowstatus_all = document.getElementById("allagree").checked;
+	
+	var changee;
+	if(nowstatus_all==true){
+		changee=true;
+		var i=1;
+		do {
+		 	document.getElementById("Y"+i).checked = changee;
+			i++;
+		} while(i<5);
+	}
+	
+	if(nowstatus_all==false){
+		changee=true;
+		var w=1;
+		do {
+		 	document.getElementById("N"+w).checked = changee;
+			w++;
+		} while(i<5);
+	}
+	
+	
+// 	//이건 그 
+// 	var status = document.getElementById(id)
+}
+function checkvalue() {
+	document.getEl
+}
+</script>
+
+<body>
+<fieldset>
+<form name="frm" id="frm" >
+	<legend> [해당 광고 서비스를 선택하세요.] </legend> 
+	<br>
+	<span name="">
+	sms 수신여부 : 
+	<label> <input type="radio" name="smssend" id="Y1" value="Y" > 동의함 </label>
+	<label> <input type="radio" name="smssend" id="N1" value="N" checked="checked"> 동의안함 </label> 
+	<br>
+	이메일 수신여부 : 
+	<label> <input type="radio" name="emailsend" id="Y2" value="Y" > 동의함 </label>
+	<label> <input type="radio" name="emailsend" id="N2" value="N" checked="checked"> 동의안함 </label>
+	<br>
+	이벤트 알림 수신여부 : 
+	<label> <input type="radio" name="eventsend" id="Y3" value="Y" > 동의함 </label>
+	<label> <input type="radio" name="eventsend" id="N3" value="N" checked="checked"> 동의안함 </label>
+	<br>
+	푸시 알림 수신여부 : 
+	<label> <input type="radio" name="pushsend" id="Y4" value="Y" > 동의함 </label>
+	<label> <input type="radio" name="pushsend" id="N4" value="N" checked="checked"> 동의안함 </label>
+	<br>
+	<label> <input type="checkbox" name="allagree" id="allagree" onclick="changevalue();"> 전체 서비스에 동의함 </label>
+	<br>
+	<label> <input type="button" name="next" id="next" value="다음으로" class="nextbutton" onclick="checkvalue();"> </label>
+</span>
+</form>
+</fieldset>
+</body>
+
+</html>

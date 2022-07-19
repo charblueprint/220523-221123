@@ -1,0 +1,89 @@
+<!DOCTYPE.html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta meta http-equiv="Imagetoolbar" content="no">
+<style>
+.paymentpopup {
+	border: 1px solid black;
+}
+</style>
+<title>title</title>
+<script>
+// 	function total() {
+// 		console.log(5600);
+// 	}
+	var check = false;
+	
+	function checkstatus() {
+		var choose = document.getElementById("frm3");
+		if (pay1.checked) {
+			check = true;
+			no_account();
+		} 
+		if (check=false) {
+			alert("잘못된 접근입니다.");
+		}
+	}
+	function no_account() {
+		var info= ["하나은행 608-12-553432 예금주명 : 홍길동","SC은행 323-20-227025 예금주명 : 홍길동","국민은행 64-2342-1134568 예금주명 : 홍길동"];
+// 		var ww = 0;
+// 		var text, label1, space1;
+// 		while (ww < 3) {
+// 			label1 = document.createElement("label");
+// 			space1 = document.createElement("input");
+// 			space1.type = "select";
+// 			space1.name = "account";
+// 			text = document.createTextNode(info[ww]);
+// 			label.append(input);
+// 			label1.append(text);
+// 			document.getElementById("something").append(space1);
+// 			ww++;
+// 		}
+// 		var space1 = document.createElement("input");
+// 		space1.type = "option"; space1.name="account";
+// 		space1.value="계좌를 선택하세요";
+// 		document.getElementById("something").append(space1);
+		
+// 		var space2 = document.createElement("input");
+// 		space2.type="Text"; space2.name="buyer";
+// 		space2.value="";
+	}
+</script>
+</head>
+
+<body>
+	<div class="paymentpopup">
+		<p>
+			결제하실 금액 : 원 <br> 최종 결재하실 결재 방식을 선택해주시길 바랍니다.
+		</p>
+		<p>
+		<form id="frm3" name="frm3">
+			<span> <label> <input type="radio" name="payment"
+					id="pay1" value="noaccount"> 무통장 입금
+			</label> <label> <input type="radio" name="payment" id="pay2">
+					가상계좌
+			</label> <label> <input type="radio" name="payment" id="pay3">
+					계좌이체
+			</label> <label> <input type="radio" name="payment" id="pay4">
+					신용카드
+			</label> <br>
+			</span> <input type="button" name="chosen" id="chosen" value="결제 완료"
+				onclick="check()">
+		</form>
+		<span id="something">
+			
+		</span>
+		<input>
+		</p>
+
+	</div>
+
+</body>
+<script>
+	
+	
+</script>
+</html>
