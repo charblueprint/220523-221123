@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ul { list-style: none; }
+</style>
+<title>Javascript 6일차 Node 1차 (Attribute)</title>
+<script>
+	function abc(b) {
+		var mu = document.getElementById("menus2").children;
+		console.log(mu);
+	/*	var mu = document.getElementById("menus2");
+		console.log(mu.children[0].attributes);		*/
+	}
+</script>
+</head>
+
+<body>
+	<ul id="menus" onclick="abc();">
+		<li menu="0">메뉴1</li>
+		<li menu="1">메뉴2</li>
+		<li menu="2">메뉴3</li>
+		<li menu="3">메뉴4</li>
+		<li menu="4">메뉴5</li>
+		<li menu="5">메뉴6</li>
+	</ul>
+	
+	<ul id="menus2" >
+		<li menu="0" onclick="abc(0);">메뉴1</li>
+		<li menu="1" onclick="abc(1);">메뉴2</li>
+		<li menu="2" onclick="abc(2);">메뉴3</li>
+		<li menu="3" onclick="abc(3);">메뉴4</li>
+		<li menu="4" onclick="abc(4);">메뉴5</li>
+		<li menu="5" onclick="abc(5);">메뉴6</li>
+	</ul>
+</body>
+<script>
+	var data = [ "푸드페어", "메가뷰티쇼", "종근당", "필립스", "글로벌 쇼핑데이", "특가 대방출" ];
+	function abc() {
+		var m = document.getElementById("menus");
+// 		console.log(m.children[0]);
+	var iv = 0;
+	while(iv < m.children.length){
+		/* 반복문 안에 funtion은 사용불가능하나 핸들링 함수형태로 사용시 반복문 안에 사용할 수 있음.
+			단, 그외 반복문 변수로 배열,번호등을 적용하는 것은 불가능하다.
+		*/
+		m.children[iv].onclick = function(aa) {
+			var node = this.getAttribute("menu");
+			gopage(node);
+			//=> jquery : attr, Java : attribute
+			/* Javascript : setAttribute => 속성을 설정함
+							getAttribute => 속성을 가져옴	*/
+		}
+		iv++;
+	}
+	//=> m.children[iv].onclick = function(aa) 이 줄에서는 배열이나 번호 불러서 쓰는게 안된다는 소리다!
+	} function gopage(no) {
+		console.log(data[no]);
+	}
+</script>
+</html>

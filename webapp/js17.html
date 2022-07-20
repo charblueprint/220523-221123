@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="Ie=Edge, chrome=1">
+<title>Javascript 6일차 history.go + 배열</title>
+<script>
+	function abc() {
+		history.go(-1);
+		/*history.go()
+		전 페이지 또는 이동한 전전 페이지로 이동할 수 있는 함수입니다.*/
+	}
+</script>
+</head>
+<body>
+	<a href="javascript:void abc();">뒤로가기</a>
+</body>
+<script>
+/* 
+ 홍길동
+ AB형
+ 25
+ (공란)
+ 
+ 강감찬
+ 0형
+ 29
+ kang@naver.com
+ 
+ 이순신
+ B형
+ 34
+ leess@nate.com 출력하기
+ 
+ hint : 테이블 조인 형태
+ forin, foreach사용
+ */
+const data = {
+	    "members":[
+	        ["홍길동",1],
+	        ["강감찬",2],
+	        ["이순신",3]
+	    ],
+	    "blood":[
+	        [1,"AB형"],
+	        [2,"O형"],
+	        [3,"B형"]
+	    ],
+	    "age":[
+	        [1,"25"],
+	        [2,"29"],
+	        [3,"34"]
+	    ],
+	    "email":[
+	        [1,""], 
+	        [2,"kang@naver.com"],
+	        [3,"leess@nate.com"]
+	    ]
+	};
+ 	 //console.log(data["email"][배열그룹번호][배열값]);
+	 //console.log(data["email"][2][1]); //email key안에 그룹배열을 확인함
+	 //console.log(Object.keys(data));//key값 확인
+	 //console.log(data["members"]); //사용자 이름
+	 
+	 console.log(Object.keys(data).length); //=>4
+	 console.log(data["members"].length); //=>3
+	 var i=0;
+	 for(i in data["members"]){
+	 	Object.keys(data).forEach(function(aa, bb, cc) {
+	 		if(aa=="members"){ 
+	 			//이거 배열의 키를 aa라고 부르기로 위에서 정했잖아 그러니까 그 배열의 키가 "members"일때만 0번째 인덱스 파일에서 꺼내오는거고  
+	 			console.log(data[aa][i][0]);
+	 		} else { //
+	 			console.log(data[aa][i][1]);
+	 		}
+	 	});
+	 }
+	 
+	 
+	 
+</script>
+</html>

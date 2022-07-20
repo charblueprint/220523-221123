@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javascript 6일차 key배열 Object.keys</title>
+<script>
+const m = {
+	    "mid":["hong","lee","kims","yuri","kang","ygs"],
+	    "mname":["홍길동","이순신","김유신","유리왕","강감찬","유관순"],
+	    "mtel":["010-1234-5555","010-0909-0001","010-5252-4242","010-2424-0000","010-1588-1588","010-0815-0815"]
+	};
+	var test = Object.keys(m);
+	console.log(test);
+	
+	Object.keys(m).forEach(function(elt, i, array){
+	// Object.keys : 무조건 forEach 사용!!
+		m[elt].forEach(function(elt2, i2, array2) {
+		//=> 해당 배열 변수에서 키 index값을 적용함
+			//console.log(elt2);
+		});
+	});
+	console.log(m["mid"][0]);
+	/*	Object.keys("mid").forEach(function(elt, i, array) {
+		console.log(array);
+	}); //=> 이 경우 배열 갯수만 배출하기 때문에 얘네 가지고는 암것도 못한다고	*/
+	
+	var s;
+	for(s in m) { // 배열의 키 값을 로드(mid,mname,mtel) 
+		Object.keys(m[s]).forEach(function(aa, bb, cc) {
+		//=> 각 배열의 키 값에 맞는 데이터 출력(6번 회전)
+			console.log(m[s][aa]);
+		});
+		//console.log(s);
+	}
+</script>
+</head>
+<body>
+</body>
+
+</html>
