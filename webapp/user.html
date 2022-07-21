@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://192.168.100.77:8080/js/user.js"></script>
+<style>
+ul { list-style: none; }
+.entire{ border: 1px solid black; margin: 0 auto; padding: 0 auto; float: right;}
+.divide{ float: left;  }
+.divide2{  text-align: center; border-right: 1px solid black; 
+border-bottom: 1px solid black;}
+</style>
+<title>Javascript 6일차 배열 및 오브젝트 출력</title>
+<!-- https://192.168.100.77:8080/js/user.js[person] -->
+</head>
+<body>
+	<table border="1" cellpadding="0" cellspacing="0">
+		<thead>
+		<tr>
+			<th>회원명</th>
+			<th>회원레벨</th>
+			<th>회원나이</th>
+		</tr>
+		</thead>
+		<tbody id="body">
+		<tr>
+		<td> </td>
+		<td> </td>
+		<td> </td>
+		</tr>
+		</tbody>
+	</table>
+</body>
+<script>
+	//console.log([person]);
+ /*
+member_list: Array(4) 
+0: {name: '홍길동', age: '25', level: '일반회원'}
+1: {name: '이순신', age: '33', level: '실버회원'}
+2: {name: '유관순', age: '27', level: '일반회원'}
+3: {name: '강감찬', age: '36', level: '골드회원'}
+length: 4		*/
+	var listshape = document.getElementById("body");
+	//console.log(person["member_list"][0]["name"]);
+	var num,html_tr,html_td;
+	for (num in person["member_list"]){//4
+		html_tr = document.createElement("tr");
+		var num2
+		for(num2 in person["member_list"][num]){ //3
+		html_td = document.createElement("td");
+			var code;
+			switch (num2) {
+			case "name":
+				code=num2;
+				break;
+			case "age":
+				code="age";
+				break;
+			case "level":
+				code="level";
+				break;
+			}
+			html_td.append(person["member_list"][num][code]);
+			html_tr.append(html_td);
+		}
+		listshape.append(html_tr);
+	}
+// 	console.table();
+	
+// 		//console.log(person.member_list[bb]);
+// 		console.log(Object.keys(person[bb]));
+// 		
+// 		Object.keys()
+// 		
+		
+</script>
+</html>

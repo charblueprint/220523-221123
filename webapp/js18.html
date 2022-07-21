@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://192.168.100.77:8080/js/product.js"> </script>
+<style>
+ul{list-style: none;}
+.divshape{ margin: 0; padding: 0;   }
+.ulshape{ list-style: none; border: 1px solid black; width: 160px; height: 500px; }
+
+</style>
+<title>Javascript 6일차 응용</title>
+</head>
+
+<body>
+		<div class="divshape" >
+			<ul id="itemslist"> 
+			
+			</ul>
+		</div>
+		<!-- 여기서부터 우르르 반복문 돌려야함
+		지금 보니까 그냥 ul,li도 4번씩 돌리는 거니까 저거 갯수 맞춰서 ul,li,
+<!-- 		product["img"][전체],product["pd"][0],product["money"][0] 이거 뽑으면 되는거거든.-->
+<!-- 			 -->
+<!-- 				<li> product["img"][0]</li> -->
+<!-- 				<li> product["pd"][0]</li> -->
+<!-- 				<li> product["money"][0]</li> -->
+<!-- 			 -->
+<!-- 			<ul class="ulshape" id="items2">  -->
+<!-- 			</ul> -->
+<!-- 			<ul class="ulshape" id="items3">  -->
+<!-- 			</ul> -->
+<!-- 			<ul class="ulshape" id="items4"> -->
+<!-- 			</ul> -->
+		
+</body>
+<script>
+	//console.log(product["img"].length);
+	var html_ul,html_li1,html_li2,html_li3;
+	var html_div = document.getElementById("itemslist");
+	
+	var i;
+	for(i in product){
+		html_ul = document.createElement("ul");
+	}
+// 	do{
+// 		var ii;
+// 		for(ii in product["img"]){
+// 		
+// 		html_ul.className = "ulshape";
+// 		html_li1 = document.createElement("li");
+// 		html_li1.innerHTML = "<img src='"+product["img"][ii]+"'>";
+// 		html_li2 = document.createElement("li");
+// 		html_li2.innerText = product["pd"][ii];
+// 		html_li3 = document.createElement("li");
+// 		html_li3.innerText = product["money"][ii];
+// 		var entire,code;		
+// 		for(entire in product["img"]){
+// 		html_ul.append(html_li1,html_li2,html_li3);
+// 			
+// 			}
+// 		html_div.append(html_ul);
+// 		}
+// 		i++;
+// 	}while (i<product["img"].length);
+	//product["member_list"][num][code]
+	
+// 	var entire;
+// 	for(entire in product["img"]){
+// 		console.log(product["img"][entire]);	
+// 	}
+</script>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://192.168.100.77:8080/js/product.js"> </script>
+<title>javascript 6일차 상품리스트 출력</title>
+<style>
+.pdlist{ width:1000px; height: 600px; border: 1px soild black; box-sizing: border-box; margin:0 auto; }
+.pdlist > ul { list-style: none; margin: 0; padding: 20px; width: inherit; height: auto;}
+.pdlist > ul > li {background-color: blue; float: left; width: 200px; height: 500px; margin: 20px; }
+.olcss{ list-style: none; margin: 0; padding: 0; width: inherit; height: auto;}
+.olcss > li { width: inherit; font-size: 13px; font-weight: blod;}
+.olcss > li:nth-of-type(1) {
+	height: 200px;
+}
+.olcss > li:nth-of-type(2) {
+	height: 60px; text-align: center;
+}
+.olcss > li:nth-of-type(3) {
+	height: 30px; text-align: center; line-height: 30px;
+}
+
+
+</style>
+</head>
+<body>
+	<div class="pdlist">
+<!-- 		<ul> -->
+<!-- 			<li> -->
+<!-- 				<ol class="olcss"> -->
+<!-- 					<li> <img src="./product/product3.jpg"> </li> -->
+<!-- 					<li> 앱솔루트 </li> -->
+<!-- 					<li> 45,000 </li> -->
+<!-- 				</ol> -->
+<!-- 			</li> -->
+<!-- 		</ul> -->
+	</div>
+</body>
+<script>
+	var html = document.getElementById("ulproduct");
+	
+	var p,pp;
+	var lihtml,ol,li,img;
+	
+	for(p in product["pd"]){ //상품 갯수
+		lihtml=document.createElement("li");
+		ol = document.createElement("ol"); 
+		ol.className="olcss";
+		
+		for(pp in product){//키 개수
+			
+			var field;
+			if(pp=="pd"){
+				field="img";
+				img = document.createElement("img");
+				img.src = product[field][p];
+				li.append(img);
+			} else if(pp=="img"){
+				field="pd";
+// 				li.append();
+				li.innerHTML= product[field][p];
+			} else if(pp=="money"){
+				field=pp;
+				li.append(Number(product[field][p]).toLocaleDateString());
+			} 
+			li = document.createElement("li");
+			//console.log(product[field][p]);
+			ol.append(li);
+		}
+		lihtml.append(ol);
+		html.append(lihtml);
+	}
+</script>
+</html>

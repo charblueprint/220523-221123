@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://192.168.100.77:8080/js/product_list.js"></script>
+<title>Insert title here</title>
+<script>
+	function allcheck() {
+		if (frm.allselect.checked == true) {
+			var w = 0;
+			var ck;
+			do {
+				frm.pd[w].checked=true;
+				w++;
+			} while (w < ea);
+		} else {
+			var w = 0;
+			var ck;
+			do {
+				frm.pd[w].checked=false;
+				w++;
+			} while (w < ea);
+		}
+	}
+		function abc() {
+			if(frm.)
+			alert("하나라도 전송이 되어야 합니다.");
+			frm.submit();
+		}
+</script>
+</head>
+<body>
+	<form id="frm" name="frm" method="get" action="./product.html">
+		<table border="1" cellpadding=0; cellspacing=0;>
+			<thead>
+				<tr>
+					<th><input type="checkbox" id="allselect"
+						onclick="allcheck();"></th>
+					<th>상품명</th>
+					<th>가격</th>
+				</tr>
+			</thead>
+			<tbody id="mainwork">
+				<!-- 				<tr> -->
+				<!-- 					<td>1</td> -->
+				<!-- 					<td>2</td> -->
+				<!-- 					<td>3</td> -->
+				<!-- 				</tr> -->
+			</tbody>
+		</table>
+		<input type="button" value="구매하기" onclick="abc()">
+	</form>
+</body>
+<script>
+	/*상품 이름을 뽑으려면 : product["pd_name"][n][0]
+	 *상품 가격을 뽑으려면 : product["pd_name"][n][1]
+	 *상품의 value 값을 뽑으려면 : product["pd_name"][n][2]
+	 product["pd_name"]=4개
+	 const product={
+	 "pd_name":["상품이름","가격","value값"]x4}
+	 */
+	//console.log(product.length);
+	var dofirst = document.getElementById("mainwork");
+	/*Object.keys(product["pd_name"]).forEach(function(aa,bb,cc){
+		var f;
+		for(f ind product["pd_name"][aa]){
+			switch (f) {
+			var code;
+			case 0: //상품명 -> product["pd_name"][0]일때 그대로 나오는것이 아닌 순서를 바꾸기 위함!
+				code = 2;
+				break;
+			case 1: //가격
+				codes = 0;
+				break;
+			case 2: //고유값
+				codes = 1; 
+				break;
+			}
+		}
+	}*/
+	var h_tr, h_td, i, input;
+	var ea = product["pd_name"].length;
+	for (i in product["pd_name"]) { //4개
+		h_tr = document.createElement("tr");
+		var ii;
+		for (ii in product["pd_name"][i]) { //ii=3
+			h_td = document.createElement("td");
+			//console.log(product["pd_name"][i][ii].length);
+			var codes;
+			switch (ii) {
+			case "0":
+				codes = 2;
+				input = document.createElement("input");
+				input.type = "checkbox";
+				input.name = "pd";
+				input.value = product["pd_name"][i][codes];
+				h_td.append(input);
+				break;
+			case "1":
+				codes = 0;
+				h_td.append(product["pd_name"][i][codes]);
+				break;
+			case "2":
+				codes = 1;
+				h_td.append(Number(product["pd_name"][i][codes])
+						.toLocaleString());
+				break;
+			}
+		h_tr.append(h_td);
+		}
+		dofirst.append(h_tr); //->이걸 4번 돌아가는 그 곳에 넣어야지 얘도 작동되지 않을까?
+				//넣는 순서가 정말 중요하다 할 수 있다.
+
+	}
+</script>
+</html>

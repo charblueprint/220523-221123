@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ul,ol{ list-style: none; }
+body{ margin: 0 auto; padding: 0 auto;} 
+.listshape { width: 330px; height: 90px; }
+.ol_css  {
+	width: 330px; height: 90px;
+	float: right;
+	text-align: center;
+	border: 1px solid black; 
+}
+.li_css{
+	width: 110px; height: 45px; float: left;  }
+</style>
+<title> 응용문제 #1</title>
+</head>
+<body>
+	<div class="listshape">
+		<ol id="linklist" class="ol_css" >
+		</ol>
+	</div>
+</body>
+<script>
+	const banners = [ {
+		"p_title" : "지마켓",
+		"p_img" : "./mini/logo_quick_01.png",
+		"p_link" : "https://www.gmarket.co.kr/"
+	}, {
+		"p_title" : "옥션",
+		"p_img" : "./mini/logo_quick_02.png",
+		"p_link" : "http://www.auction.co.kr/"
+	}, {
+		"p_title" : "하프클럽",
+		"p_img" : "./mini/logo_quick_03.png",
+		"p_link" : "http://www.halfclub.com/"
+	}, {
+		"p_title" : "11번가",
+		"p_img" : "./mini/logo_quick_04.png",
+		"p_link" : "https://www.11st.co.kr/"
+	}, {
+		"p_title" : "위메프",
+		"p_img" : "./mini/logo_quick_05.png",
+		"p_link" : "https://front.wemakeprice.com/"
+	}, {
+		"p_title" : "쿠팡",
+		"p_img" : "./mini/logo_quick_06.png",
+		"p_link" : "https://www.coupang.com/"
+	} ];
+	
+	/*banner => 연관 배열*/
+	/*제목 꺼낼때 : banners[i]["p_title"]
+	이미지 링크 소환 : banners[i]["p_img"]
+	하이퍼 링크 소환 : banners[i]["p_link"]*/
+
+	var i = 0;
+	var box1, box2;
+	do {
+		box1 = document.getElementById("linklist");
+		box2 = document.createElement("li");
+		box2.className = "li_css";
+		box2.innerHTML += "<a href='"+banners[i]["p_link"]+"'>" 
+						+"<img src='"+banners[i]["p_img"]+"'>"+ "</a>";
+		box1.append(box2);
+		i++;
+	} while (i < banners.length);
+	
+	
+</script>
+</html>

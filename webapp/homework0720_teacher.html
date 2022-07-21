@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.ulcss{ list-style: none; margin: 0; padding: 0; width:240px; }
+.ulcss > li { width: 80px; height: 35px; overflow: hidden; }
+</style>
+<title>Javascript 6일차 배열 및 오브젝트 출력</title>
+<script src="./banners.js"></script> <!-- 사용할 이미지,데이터 : <script src="./(파일 명)"> -->
+</head>
+<body>
+<ul id="banner" class="ul_css">
+	<li> 
+		<a href="">
+			<img alt="" title="" src="">
+		</a> 
+	</li>
+</ul> 
+<!-- 진짜 할때는 아마 class만 있을거야 id나 name은 내가 설정해야해 -->
+<!-- 마크업 아닌 태그는 제발 맨 마지막에 설정할 것!!!! 그렇게 설정 안하면 컴퓨터가 -->
+</body>
+<script>
+	var html = document.getElementById("banner");
+	var html_li, html_a, html_img;
+	banners.forEach(function(aa, bb, cc) {
+		//aa : 배열 /bb: index 
+		//li,a,img -> 출력해야 할 것들
+		//console.log(bb); //=>banners 파일에 존재하는 배열의 칸 이름 : 0 같은 숫자로 나옴
+		//console.log(banners[bb]);//=> banners 파일에 존재하는 배열의 칸 안에 뭐가 있는지 우수수 출력
+		html_li = document.createElement("li");
+		html_a = document.createElement("a");
+		html_img = document.createElement("img");
+		Object.keys(banners[bb]).forEach(function(a1, a2, a3) {
+			//a태그 안에는 href, src, title 얘네 넣어야 하니까 싹 돌리는 거야
+			//console.log(banners[bb][a1]);
+			switch (a1) {
+			case "p_title":
+				html_img.title=banners[bb][a1];
+				break;
+			case "p_img":
+				html_img.src=banners[bb][a1];
+				break;
+			case "p_link":
+				html_a.href=banners[bb][a1];
+				break;
+			}
+		});
+		html_a.append(html_img);
+		html_li.append(html_a);
+	});
+</script>
+</html>
